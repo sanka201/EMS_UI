@@ -1,0 +1,339 @@
+/* assets/style.css */
+
+/* Center the navbar brand */
+
+/* Custom glow effect for cards */
+.card.glow-effect {
+    position: relative;
+    /* Ensure the card is positioned relative for pseudo-element positioning */
+    z-index: 1;
+    /* Set a higher stacking context */
+    overflow: hidden;
+    /* Hide the glow overflow */
+}
+
+/* Add the glow using a pseudo-element */
+.card.glow-effect::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    background: radial-gradient(circle at center,
+            rgba(0, 123, 255, 0.5),
+            transparent 70%);
+    z-index: -1;
+    /* Place the pseudo-element behind the card */
+}
+
+/* Alternative glow using box-shadow */
+.card.glow-effect {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
+}
+
+
+.navbar-brand-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+/* Align nav links to the left */
+.navbar .nav-links {
+    margin-right: auto;
+}
+
+/* Ensure navbar content is relative for positioning */
+.navbar {
+    position: relative;
+}
+
+/* Additional styling for navbar links (optional) */
+.navbar .nav-link {
+    color: #ffffff;
+    padding-right: 15px;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #dddddd;
+}
+
+/* Active link styling */
+.navbar .nav-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+    .navbar-brand-center {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .navbar .nav-links {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+/* assets/style.css */
+
+/* Existing styles... */
+
+/* Style for nav-link-icon */
+.nav-link-icon {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    margin-right: 15px;
+    border-radius: 20px;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link-icon:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+.nav-link-icon.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+.nav-link-icon .fas {
+    margin-right: 5px;
+    color: #ffffff;
+}
+
+.nav-link-text {
+    color: #ffffff;
+}
+
+.navbar .nav-links {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link-icon:hover .fas,
+.nav-link-icon:hover .nav-link-text {
+    color: #ffffff;
+}
+
+.nav-link-icon.active .fas,
+.nav-link-icon.active .nav-link-text {
+    color: #ffffff;
+}
+
+/* assets/style.css */
+
+/* Existing styles... */
+
+/* Pricing card styles */
+.pricing-label {
+    font-weight: bold;
+    color: #343a40;
+    /* Dark gray */
+}
+
+.pricing-value {
+    font-size: 1.2em;
+    color: #007bff;
+    /* Bootstrap primary color */
+}
+
+.pricing-trend {
+    font-size: 1.2em;
+}
+
+.card-body div {
+    display: flex;
+    align-items: center;
+}
+
+/* EV Card Container */
+.ev-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* EV Image */
+.ev-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.battery-image {
+    width: 20%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* EV Status Flexbox */
+.ev-status-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* EV Status Icon */
+#ev-status-icon {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+/* EV Status Text */
+#building1-ev-status {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* EV Battery Level */
+#building1-ev-battery-level {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-top: 10px;
+}
+
+/* Additional Styling if Needed */
+.ev-status-flex span {
+    display: block;
+}
+
+
+/* assets/style.css */
+
+/* Adjust chart titles */
+.plotly-graph-div .main-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Adjust margins and padding inside cards if needed */
+.card-body {
+    padding: 15px;
+}
+
+/* Responsive adjustments for charts */
+@media (max-width: 767px) {
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+/* assets/style.css */
+
+/* Style for the secondary navigation bar */
+.secondary-nav {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* assets/style.css */
+
+/* Style for the secondary navigation bar */
+.secondary-nav {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Remove any centering from the nav links */
+.secondary-nav .navbar-nav {
+    margin-left: 0;
+    /* Ensure nav items start from the left */
+}
+
+/* Style for the navigation links */
+.building-nav-link {
+    color: black !important;
+    /* Set font color to black */
+    font-weight: bold;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    /* Rounded bounding box */
+    margin-right: 5px;
+    /* Space between nav items */
+    transition: background-color 0.2s;
+}
+
+/* Style for the icons within the navigation links */
+.building-nav-link .fa {
+    margin-right: 8px;
+    /* Space between icon and text */
+}
+
+/* Hover effect */
+.building-nav-link:hover {
+    background-color: #f0f0f0;
+    /* Light gray on hover */
+    text-decoration: none;
+}
+
+/* Active link styling */
+.building-nav-link.active {
+    background-color: #e0e0e0;
+    /* Slightly darker gray for active link */
+    color: black !important;
+}
+
+/* Remove default underline on links */
+.building-nav-link,
+.building-nav-link:focus,
+.building-nav-link:active {
+    text-decoration: none;
+    color: black !important;
+}
+
+.min-height-ev-card {
+    min-height: 400px;
+    /* Set your desired minimum height */
+}
+
+.battery-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* Align text to the left */
+    align-items: center;
+    /* Vertically center the text */
+    margin-bottom: 0px;
+    gap: 10px;
+    margin-right: 0px;
+    margin-left: 0px;
+    /* Add spacing between items */
+}
+
+.small-text {
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 10px;
+
+}
+
+.battery-status-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
